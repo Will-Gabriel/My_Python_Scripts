@@ -20,9 +20,9 @@ except:
 
 for subdominio in subdominios:
 	try:
-		sub_alvo = "{}.{}".format(subdominio, alvo)
+		sub_alvo = f"{subdominio}.{alvo}"
 		resultados = resolver.resolve(sub_alvo, "A")
 		for resultado in resultados:
-			print("{} -> {}".format(sub_alvo, resultado))
+			print(f"{sub_alvo} -> {resultado}")
 	except:
 		pass
