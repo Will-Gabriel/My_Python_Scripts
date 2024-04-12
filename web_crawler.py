@@ -26,8 +26,7 @@ def get_links(html):
         for tag in tags_a:
             link = tag["href"]
             if link.startswith("http"):
-                links.append(link)
-                
+                links.append(link) 
         return links
     except:
         pass
@@ -44,8 +43,7 @@ def crawl():
                     for link in links:
                         if link not in CRAWLED and link not in TO_CRAWL:
                             TO_CRAWL.append(link)
-
-                print("Crawling {}".format(url))
+                print(f"Crawling {url}")
                 CRAWLED.add(url)
             else:
                 CRAWLED.add(url)
