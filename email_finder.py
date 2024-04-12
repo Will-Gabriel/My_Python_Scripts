@@ -29,7 +29,6 @@ def get_links(html):
             link = tag["href"]
             if link.startswith("http"):
                 links.append(link)
-                
         return links
     except:
         pass
@@ -52,13 +51,11 @@ def crawl():
                     for link in links:
                         if link not in CRAWLED and link not in TO_CRAWL:
                             TO_CRAWL.append(link)
-
                 emails = get_emails(html)
                 for email in emails:
                     if email not in EMAILS:
                         print(email)
                         EMAILS.append(email)
-
                 CRAWLED.add(url)
             else:
                 CRAWLED.add(url)
