@@ -1,13 +1,11 @@
 import copy
 import sys
 from urllib import parse
-
 import requests
 
 
 def request(url):
-    headers = {"User-Agent":
-                   "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"}
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0"}
     try:
         response = requests.get(url, headers=headers)
         html = response.text
@@ -17,8 +15,7 @@ def request(url):
 
 
 def is_vulnerable(html):
-    errors = ["mysql_fetch_array()",
-              "You have an error in your SQL syntax"]
+    errors = ["mysql_fetch_array()", "You have an error in your SQL syntax"]
     for error in errors:
         if error in html:
             return True
@@ -38,7 +35,7 @@ if __name__ == "__main__":
             html = request(url_final)
             if html:
                 if is_vulnerable(html):
-                    print("[ + ] {} parameter is vulnerable".format(param))
+                    print(f"[ + ] {param} parameter is vulnerable")
                     quit()
 
     print("NOT VULNERABLE")
