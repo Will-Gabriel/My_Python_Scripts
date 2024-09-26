@@ -27,7 +27,7 @@ if __name__ == "__main__":
     params = parse.parse_qs(url_parsed.query)
     for param in params.keys():
         query = copy.deepcopy(params)
-        for c in "'\"":
+        for c in "'\'":
             query[param][0] = c
             new_params = parse.urlencode(query, doseq=True)
             url_final = url_parsed._replace(query=new_params)
