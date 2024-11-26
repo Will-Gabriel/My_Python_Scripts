@@ -5,7 +5,15 @@ import ipaddress
 import struct
 from threading import Thread
 
+
 SIGNAL = True
+
+
+def banner(msg)
+    print("ICMP FASTSCAN 2.0")
+
+
+banner()
 
 
 def checksum(source_string):
