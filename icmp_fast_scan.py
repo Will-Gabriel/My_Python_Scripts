@@ -105,7 +105,7 @@ def listen(responses, ip_network):
 if __name__ == "__main__":
     responses = []
 
-    ips = '153.152.0.0/18'  # Internet network
+    ips = '153.0.0.0/24'  # Internet network
 
     wait = 0.0001  # Adjust this based in your bandwidth (Faster link is Lower wait)
     file_name = 'log1.txt'
