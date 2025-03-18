@@ -10,7 +10,9 @@ SIGNAL = True
 
 
 def banner(msg)
+    print("=" * 20)
     print("ICMP FASTSCAN 2.0")
+    print("=" * 20)
 
 
 banner()
