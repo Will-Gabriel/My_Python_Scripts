@@ -5,7 +5,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 try:
     while True:
         msg = input("Menssage: ") + "\n"
-        client.sendto(msg.encode(), ("127.0.0.1", 4433))    #1-BYTES À ENVIAR, 2-CONEXAO: HOST E PORTA
+        client.sendto(msg.encode(), ("127.0.0.1", 4433))
         data, sender = client.recvfrom(1024)
         print(f"{sender[0]}: {data.decode}")
 
