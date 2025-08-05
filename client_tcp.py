@@ -5,8 +5,8 @@ client.settimeout(2)
 
 
 try:
-    client.connect(("google.com", 4466))    #DEFINIÇÃO DO CLIENT E A PORTA QUE QUEREMOS EFETUAR A CONEXÃO:
-    client.send(b"GET / HTTP/1.1\nHost: www.google.com\n\n\n")  #REQUISICAO DA PAGINA EX: GET / HTTP/2 ou 1.1\nHost: www.google.com
+    client.connect(("google.com", 4466))
+    client.send(b"GET / HTTP/1.1\nHost: www.google.com\n\n\n")
     received_packets = client.recv(1024).decode()
     print(received_packets)  
 except Exception as error:
