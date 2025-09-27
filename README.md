@@ -1,3 +1,3 @@
-# My Python scripts
+# Meus Scripts Python
 
-The scripts present in this repository were developed during my classes on the Solyd Offensive Security Pentest course ☠
+Os scripts presentes neste repositório foram desenvolvidos durante minhas aulas no curso Solyd Offensive Security Pentest ☠
